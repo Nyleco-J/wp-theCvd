@@ -1,6 +1,5 @@
 <?php wp_footer(); ?>
 
-
 <?php 
 
 $homepage_id = get_option('page_on_front');
