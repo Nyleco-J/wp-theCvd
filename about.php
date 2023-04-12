@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="down">
-    <a href=""><i class="fa-solid fa-angle-down"></i></a>
+    <a href=""><i class="<?php echo get_field('chevron'); ?>"></i></a>
     </div>
 </section>
 
@@ -82,5 +82,5 @@
 </section>
 
 
-<?php include 'contact.php'; ?>
+<?php include 'contactsec.php'; ?>
 <?php get_footer();?>

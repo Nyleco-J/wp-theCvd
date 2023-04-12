@@ -109,6 +109,6 @@
     </div>
 </section>
 
-<?php include 'contact.php'; ?>
+<?php include 'contactsec.php'; ?>
 
 <?php get_footer();?>

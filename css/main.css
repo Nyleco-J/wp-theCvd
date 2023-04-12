@@ -449,23 +449,181 @@ transition: 300ms;
 }
 
 /*-------------------Contact Section--------------------*/
-.contact{
-  background: #ffa700;
-  padding: 5rem 0;
-}
-.contact .contact__wrapper{
-  display: block;
-  text-align: center;
-}
-.contact .contact__wrapper h2{
-  color: black;
-  font-size: 2.3rem;
-  font-weight: 700;
-}
-.contact .contact__wrapper a{
-  margin-top: 2rem;
+.contact__section{
+    background: gray;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
+.contact__wrap{
+    display: flex;
+    place-content: center;
+    place-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact__text{
+    width: 100%;
+}
+.contact__text h2{
+    font-size: 8rem;
+    color: #ffa700;
+    font-weight: 600;
+    margin: 5rem 0;
+}
+
+.contact__text p {
+    max-width: 75%;
+    text-align: justify;
+    line-height: 2;
+    margin: 5rem 0;
+    color: #ffffff;
+}
+
+.contact__wrap .contact__text .contact__icons{
+    margin: 8rem 0;
+}
+
+.contact__wrap .contact__text .contact__icons div{
+    padding: 2rem 0;
+    margin: 0;
+}
+
+.contact__wrap .contact__text .contact__icons div i{
+  font-size: 3rem;
+  padding-right: 2rem;
+  color: #ffa700;
+}
+.contact__wrap .contact__text .contact__icons div span{
+    font-size: 1.8rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.contact__wrap .contact__text .iconsss a i{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.contact__input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+}
+
+.contact__input input{
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    text-indent: 5rem;
+}
+.contact__input input::placeholder {
+    padding-left: 2rem;
+}
+
+
+.contact__input a {
+    padding: 2rem 2rem;
+    background: #ffa700;
+    max-width: 25%;
+    text-align: center;
+    border-radius: 10rem;
+    margin-top: 2rem;
+    color: #ffffff;
+ 
+}
+
+.contact__input a:hover {
+    padding: 2rem 2rem;
+    background: #ffffff;
+    max-width: 25%;
+    text-align: center;
+    border-radius: 10rem;
+    margin-top: 2rem;
+    color: #000000;
+    border: 1px solid black;
+    border: none;
+    transition: .7s ease;
+ 
+}
+
+.contact__input .messageArea {
+    border: none;
+    outline: none;
+    padding-bottom: 10rem;
+}
+
+.contact__input div {
+    margin-top: 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width:500px){
+    .contact__wrap{
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        margin-top: 8rem;
+        padding: 0 3rem;
+      
+    }
+
+    .contact__text h2{
+        font-size: 8rem;
+        color: #ffa700;
+        font-weight: 600;
+        margin: 5rem 0;
+        text-align: center;
+    }
+
+    .contact__text p{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contact__wrap .contact__text .contact__icons div{
+        padding: 2rem 0;
+        display: flex;
+        place-content: center;
+        place-items: center;
+    
+    }
+
+    .contact__wrap .contact__text .contact__icons div i{
+        font-size: 2rem;
+        padding-right: 1rem;
+        color: #ffa700;
+      }
+
+      .contact__wrap .contact__text .contact__icons div span{
+        font-size: 1.5rem;
+        color: #ffffff;
+      }
+
+      .contact__wrap .contact__text .iconsss{
+        display: flex;
+        place-content: center;
+      }
+
+      .contact__wrap .contact__text .iconsss a i{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 2rem;
+        padding-right: 1.5rem;
+    }
+}
 
 
 /*-------------------Footer Section--------------------*/
@@ -805,6 +963,16 @@ transition: 300ms;
   justify-content: space-between;
   margin: 0 5rem;
 }
+
+.services2 .service__text{
+  order: 2;
+}
+
+.services2 img{
+  order: 1;
+}
+
+
 .services1 .service__text h1{
   color: #ffa700;
   font-size: 5rem;
@@ -839,17 +1007,20 @@ transition: 300ms;
   padding: 5rem 0;
   padding-top: 8rem;
 }
-.services2 .graphic{
+.services2 .web{
   display: flex;
   justify-content: space-between;
-  margin: 0 5rem;
+  margin: 0 8rem;
 }
+
+
 .services2 .service__text h1{
   color: #ffa700;
   font-size: 5rem;
   font-weight: 800;
   line-height: 5rem;
   margin-bottom: 5rem;
+  max-width: 40rem;
 }
 .services2 .service__text p{
   text-align: justify;
@@ -883,7 +1054,7 @@ transition: 300ms;
   padding: 5rem 0;
   padding-top: 8rem;
 }
-.services3 .social{
+.services3 .web{
   display: flex;
   justify-content: space-between;
   margin: 0 5rem;
@@ -894,6 +1065,7 @@ transition: 300ms;
   font-weight: 800;
   line-height: 5rem;
   margin-bottom: 5rem;
+  max-width: 40rem;
 }
 .services3 .service__text p{
   text-align: justify;
@@ -923,17 +1095,17 @@ transition: 300ms;
       font-size: 4rem;
       text-align: center;
    }
-   .services2 .graphic{
+   .services2 .web{
       flex-direction: column;
    }
-   .services2 .graphic h1{
+   .services2 .web h1{
       font-size: 4rem;
       text-align: center;
    }
-   .services3 .social{
+   .services3 .web{
       flex-direction: column-reverse;
    }
-   .services3 .social h1{
+   .services3 .web h1{
       font-size: 4rem;
       text-align: center;
    }
