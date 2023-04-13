@@ -82,5 +82,5 @@
 </section>
 
 
-<?php include 'contactsec.php'; ?>
+<?php include 'contactsec.php' ?>
 <?php get_footer();?>

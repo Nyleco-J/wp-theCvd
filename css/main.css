@@ -131,11 +131,12 @@ img {
 /*----------------Header--------------------*/
 .header{
   background: #2b2b2b;
-  padding: 2rem 0;
+  padding: .5rem 0;
   position: relative;
   position: fixed;
   width: 100%;
   z-index: 99;
+  border-bottom: 1px solid white;
 }
 .header .header__wrapper{
   display: flex;
@@ -418,7 +419,6 @@ transition: 300ms;
 .latest__trend .latest__card .card__text h2{
   color: #ffa700;
   font-weight: 600;
-
 }
 .latest__trend .latest__card .card__text p{
   text-align: justify;
@@ -427,7 +427,43 @@ transition: 300ms;
 .latest__trend .latest__card .card__text a{
   color: #ffa700;
 }
-
+/*Latest Trend Permalinks*/
+.Read{
+  text-align: center;
+  padding-top: 10rem;
+}
+.Read .latest{
+  padding: 4rem 0;
+}
+.Read .latest h2{
+font-size: 5rem;
+}
+.Read .latest img{
+  width: 43%;
+  height: 100%;
+  padding: 3rem 0;
+}
+.Read .latest p{
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-bottom: 5rem 0;
+  text-align: justify;
+}
+.Read .latest p::first-letter{
+  font-size: 6rem;
+  color: #ffa700;
+  margin-right: 1rem;
+  font-weight: 600;
+  float: left;
+}
+.Read .updates__author ul {
+  gap: 2rem;
+}
+.Read .updates__author ul li{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
 @media screen and (max-width:500px){
   .latest__trend .latest__title h2{
      text-align: center;
@@ -446,14 +482,43 @@ transition: 300ms;
   .latest__trend .latest__card:nth-child(2){
       margin: 5rem;
   }
+
+  /*Latest Trend Permalinks*/
+.Read{
+  text-align: center;
+  padding-top: 5rem;
+}
+.Read .latest img{
+  width: 90%;
+  height: 90%;
+  padding: 3rem 0;
+}
 }
 
 /*-------------------Contact Section--------------------*/
-.contact__section{
-    background: gray;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+.contact{
+  background: #ffa700;
+  padding: 5rem 0;
 }
+.contact .contact__wrapper{
+  display: block;
+  text-align: center;
+}
+.contact .contact__wrapper h2{
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.contact .contact__wrapper a{
+  margin-top: 2rem;
+}
+
+
+.contact__section{
+    background: #2b2b2b;
+    padding-top: 7rem;
+}
+
 
 .contact__wrap{
     display: flex;
@@ -465,11 +530,23 @@ transition: 300ms;
 .contact__text{
     width: 100%;
 }
+.contact__input form{
+  width: 100%;
+}
+.contact__input input[type=text],input[type=email],textarea{
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  border: none;
+  outline: none;
+}
+
 .contact__text h2{
     font-size: 8rem;
     color: #ffa700;
     font-weight: 600;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 .contact__text p {
@@ -485,7 +562,7 @@ transition: 300ms;
 }
 
 .contact__wrap .contact__text .contact__icons div{
-    padding: 2rem 0;
+    padding: 1rem 0;
     margin: 0;
 }
 
@@ -514,40 +591,25 @@ transition: 300ms;
    
 }
 
-.contact__input input{
-    padding: 2rem 0;
-    margin-bottom: 3rem;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-    text-indent: 5rem;
-}
-.contact__input input::placeholder {
-    padding-left: 2rem;
-}
-
-
-.contact__input a {
-    padding: 2rem 2rem;
+.contact__input input[type=submit]{
+    padding: 2rem 6rem;
     background: #ffa700;
     max-width: 25%;
     text-align: center;
     border-radius: 10rem;
     margin-top: 2rem;
     color: #ffffff;
- 
+    border: 1px solid transparent;
 }
 
-.contact__input a:hover {
-    padding: 2rem 2rem;
+.contact__input input[type=submit]:hover {
+    padding: 2rem 6rem;
     background: #ffffff;
     max-width: 25%;
     text-align: center;
     border-radius: 10rem;
     margin-top: 2rem;
     color: #000000;
-    border: 1px solid black;
-    border: none;
     transition: .7s ease;
  
 }
@@ -561,15 +623,20 @@ transition: 300ms;
 .contact__input div {
     margin-top: 0rem;
     display: flex;
-    justify-content: flex-end;
+    
 }
 
 hr {
     padding: 0;
     margin: 0;
 }
-
+.wpcf7-response-output{
+  color: red;
+}
 @media screen and (max-width:500px){
+  .contact__section{
+    padding-top: unset;
+}
     .contact__wrap{
         display: flex;
         flex-direction: column;
@@ -623,6 +690,7 @@ hr {
         font-size: 2rem;
         padding-right: 1.5rem;
     }
+    
 }
 
 
@@ -816,7 +884,7 @@ hr {
   padding: 5rem 0;
 }
 .updates .updates__title{
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 .updates .updates__title h1{
  color: #ffa700;
@@ -843,8 +911,8 @@ hr {
 
 }
 .updates .left__item img{
-  width: 100%;
- 
+  width: 80%;
+  height: fit-content;
 }
 .updates .updates__author ul{
   display: flex;
@@ -950,6 +1018,9 @@ hr {
   }
   .updates .rp__item__text h4{
       text-align: justify;
+  }
+  .updates .left__item img{
+   width: unset;
   }
 }
 /*-------------------REPEATABLE PATTERN--------------------*/

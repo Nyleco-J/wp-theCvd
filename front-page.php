@@ -39,7 +39,7 @@
                     <i class="<?php echo get_field ('text_icon'); ?>"></i>
                     <h4><?php the_title(); ?></h4>
                     <p><?php the_content(); ?> </p>
-                    <a class="btn bg--yellow"href=""><?php echo get_field ('a_button'); ?></a>
+                    <a class="btn bg--yellow"href="<?php echo site_url ('services'); ?>">Get Quote</a>
                 </div>
     <?php 
 
@@ -91,8 +91,8 @@
                 <?php echo get_the_post_thumbnail(); ?>
                     <div class="card__text">
                     <h2><?php the_title(); ?></h2>
-                    <p><?php the_content(); ?></p>
-                    <a href=""><?php echo get_field('a_read'); ?></a>
+                    <p><?php the_excerpt(); ?></p>
+                    <a href="<?php echo the_permalink(); ?>">Read more..</a>
                     </div>
                 </div>             
                     
