@@ -58,11 +58,41 @@
                     <table>
                         <tr>
                             <td>Web Design</td>
-                            <td>(2)</td>
+                            <td>
+                                <?php 
+                                $the_query = new WP_Query( array(
+                                    'post_type' => 'latest',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field' => 'slug',
+                                            'terms' => 'web-design'
+                                        )
+                                    )
+                                ) );
+                                $count = $the_query->found_posts;
+                                echo $count;
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td>Web Development</td>
-                            <td>(3)</td>
+                            <td>
+                            <?php 
+                                $the_query = new WP_Query( array(
+                                    'post_type' => 'latest',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field' => 'slug',
+                                            'terms' => 'web-development'
+                                        )
+                                    )
+                                ) );
+                                $count = $the_query->found_posts;
+                                echo $count;
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td>Wire Frame</td>
