@@ -96,15 +96,54 @@
                         </tr>
                         <tr>
                             <td>Wire Frame</td>
-                            <td>(1)</td>
+                            <td><?php 
+                                $the_query = new WP_Query( array(
+                                    'post_type' => 'latest',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field' => 'slug',
+                                            'terms' => 'wire-frame'
+                                        )
+                                    )
+                                ) );
+                                $count = $the_query->found_posts;
+                                echo $count;
+                                ?></td>
                         </tr>
                         <tr>
                             <td>Vector & Logo</td>
-                            <td>(5)</td>
+                            <td><?php 
+                                $the_query = new WP_Query( array(
+                                    'post_type' => 'latest',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field' => 'slug',
+                                            'terms' => 'vector-logo'
+                                        )
+                                    )
+                                ) );
+                                $count = $the_query->found_posts;
+                                echo $count;
+                                ?></td>
                         </tr>
                         <tr>
                             <td>Social Media</td>
-                            <td>(2)</td>
+                            <td><?php 
+                                $the_query = new WP_Query( array(
+                                    'post_type' => 'latest',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'category',
+                                            'field' => 'slug',
+                                            'terms' => 'social-media'
+                                        )
+                                    )
+                                ) );
+                                $count = $the_query->found_posts;
+                                echo $count;
+                                ?></td>
                         </tr>
                     </table>
                 </div>

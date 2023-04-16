@@ -80,7 +80,8 @@
 
             $args = array(
                 'post_type' => 'latest',
-                'posts_per_page' => -1,
+                'posts_per_page' => 3,
+                'offset'  => -1,
             );
 
             $newQuery = new WP_Query($args);
